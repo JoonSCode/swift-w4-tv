@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F734378925C2F18A001B8B6E /* FavoriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F734378825C2F18A001B8B6E /* FavoriteTableViewController.swift */; };
 		F73A00AD25BE79FE00A7F70A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73A00AC25BE79FE00A7F70A /* AppDelegate.swift */; };
 		F73A00AF25BE79FE00A7F70A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73A00AE25BE79FE00A7F70A /* SceneDelegate.swift */; };
 		F73A00B125BE79FE00A7F70A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73A00B025BE79FE00A7F70A /* MainViewController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F734378825C2F18A001B8B6E /* FavoriteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoriteTableViewController.swift; path = TVApp/Controller/FavoriteTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		F73A00A925BE79FE00A7F70A /* TVApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F73A00AC25BE79FE00A7F70A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F73A00AE25BE79FE00A7F70A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			children = (
 				F73A012025BFD38100A7F70A /* VideoCollectionViewCell.swift */,
 				F73A012825BFDD2800A7F70A /* VideoCollectionView.swift */,
+				F734378825C2F18A001B8B6E /* FavoriteTableViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F734378925C2F18A001B8B6E /* FavoriteTableViewController.swift in Sources */,
 				F73A012925BFDD2800A7F70A /* VideoCollectionView.swift in Sources */,
 				F753ACF925C1AEBD002D1491 /* Convert.swift in Sources */,
 				F73A013F25C0FE6C00A7F70A /* VideoManager.swift in Sources */,

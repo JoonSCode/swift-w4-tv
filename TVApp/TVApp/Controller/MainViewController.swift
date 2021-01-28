@@ -43,7 +43,7 @@ class MainViewController: UIViewController {
 //        videoCollectionView.reloadData()
         NotificationCenter.default.post(name: .contentsChanged, object: nil)
     }
-
+    
     func calculateCellSize(viewWidth: CGFloat?) {
         var width = (viewWidth ?? UIScreen.main.bounds.width) - 20
         var height: CGFloat
