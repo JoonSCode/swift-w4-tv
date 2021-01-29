@@ -17,34 +17,35 @@ struct Video: Codable {
     var visitCount: Int {
         return channel.visitCount
     }
+
     var thumbnailUrl: String {
         if let live = live {
             return live.thumbnailUrl
-        }
-        else if let clip = clip {
+        } else if let clip = clip {
             return clip.thumbnailUrl
         }
         return ""
     }
+
     var contentInfo: String {
         if let live = live {
             return "🎧\(live.playCount)"
-        }
-        else if let clip = clip {
+        } else if let clip = clip {
             return Convert.durationToString(duration: clip.duration)
         }
         return ""
     }
-    
+
     struct Live: Codable {
         let playCount, duration: Int
         let thumbnailUrl: String
     }
+
     struct Clip: Codable {
         let duration: Int
         let thumbnailUrl: String
     }
-    
+
     enum VideoType: String, Codable {
         case LIVE
         case CLIP

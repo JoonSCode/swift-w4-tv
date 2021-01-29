@@ -13,7 +13,7 @@ class Convert {
         numberFormatter.numberStyle = .decimal
         return numberFormatter.string(from: NSNumber(value: number)) ?? ""
     }
-    
+
     static func getDistFromCurrentTime(time: String) -> String {
         var distance: String = ""
         guard let createTime = time.toDate(format: "yyyy-MM-dd HH:mm:ss") else { return distance }
@@ -44,7 +44,7 @@ class Convert {
         }
         return distance
     }
-    
+
     static func durationToString(duration: Int) -> String {
         let hour = duration / 60
         let minute = duration % 60

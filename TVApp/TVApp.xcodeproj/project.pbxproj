@@ -15,7 +15,6 @@
 		F73A00B625BE7A0100A7F70A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F73A00B525BE7A0100A7F70A /* Assets.xcassets */; };
 		F73A00B925BE7A0100A7F70A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F73A00B725BE7A0100A7F70A /* LaunchScreen.storyboard */; };
 		F73A012125BFD38100A7F70A /* VideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73A012025BFD38100A7F70A /* VideoCollectionViewCell.swift */; };
-		F73A012925BFDD2800A7F70A /* VideoCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73A012825BFDD2800A7F70A /* VideoCollectionView.swift */; };
 		F73A012C25C000C100A7F70A /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73A012B25C000C100A7F70A /* Channel.swift */; };
 		F73A013525C01A8D00A7F70A /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73A013425C01A8D00A7F70A /* String+.swift */; };
 		F73A013825C01B0000A7F70A /* DateFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73A013725C01B0000A7F70A /* DateFormatter+.swift */; };
@@ -36,7 +35,6 @@
 		F73A00B825BE7A0100A7F70A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F73A00BA25BE7A0100A7F70A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F73A012025BFD38100A7F70A /* VideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewCell.swift; sourceTree = "<group>"; };
-		F73A012825BFDD2800A7F70A /* VideoCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionView.swift; sourceTree = "<group>"; };
 		F73A012B25C000C100A7F70A /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		F73A013425C01A8D00A7F70A /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		F73A013725C01B0000A7F70A /* DateFormatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+.swift"; sourceTree = "<group>"; };
@@ -95,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				F73A012025BFD38100A7F70A /* VideoCollectionViewCell.swift */,
-				F73A012825BFDD2800A7F70A /* VideoCollectionView.swift */,
 				F734378825C2F18A001B8B6E /* FavoriteTableViewController.swift */,
 			);
 			path = View;
@@ -208,7 +205,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F734378925C2F18A001B8B6E /* FavoriteTableViewController.swift in Sources */,
-				F73A012925BFDD2800A7F70A /* VideoCollectionView.swift in Sources */,
 				F753ACF925C1AEBD002D1491 /* Convert.swift in Sources */,
 				F73A013F25C0FE6C00A7F70A /* VideoManager.swift in Sources */,
 				F73A00B125BE79FE00A7F70A /* MainViewController.swift in Sources */,

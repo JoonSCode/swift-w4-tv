@@ -43,7 +43,7 @@ class MainViewController: UIViewController {
 //        videoCollectionView.reloadData()
         NotificationCenter.default.post(name: .contentsChanged, object: nil)
     }
-    
+
     func calculateCellSize(viewWidth: CGFloat?) {
         var width = (viewWidth ?? UIScreen.main.bounds.width) - 20
         var height: CGFloat
@@ -54,8 +54,7 @@ class MainViewController: UIViewController {
         } else {
             if UIDevice.current.orientation.isLandscape {
                 width /= 3
-            }
-            else{
+            } else {
                 width /= 2
             }
         }
@@ -92,11 +91,10 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
         if videoType == .CLIP {
             target.hideLiveBadge()
-        }
-        else {
+        } else {
             target.showLiveBadge()
         }
-        
+
         target.setTitle(title: by.displayTitle)
         target.setThumbnail(thumbnail: thumbnail)
         target.setChannelName(channelName: by.channel.name)

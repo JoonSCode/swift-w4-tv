@@ -12,11 +12,10 @@ class JSON {
     static func parsingVideoJson(from: String) -> [Video] {
         let decoder = JSONDecoder()
         var videos: [Video] = []
-        guard let videoJson = NSDataAsset(name: from) else {return videos}
+        guard let videoJson = NSDataAsset(name: from) else { return videos }
         do {
             videos = try decoder.decode([Video].self, from: videoJson.data)
-        }
-        catch {
+        } catch {
             print(error.localizedDescription)
         }
         return videos
