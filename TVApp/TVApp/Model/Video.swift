@@ -35,14 +35,22 @@ struct Video: Codable {
         }
         return ""
     }
+    var id: Int{
+        if let live = live {
+            return live.id
+        } else if let clip = clip {
+            return clip.id
+        }
+        return -1
+    }
 
     struct Live: Codable {
-        let playCount, duration: Int
+        let playCount, duration, id: Int
         let thumbnailUrl: String
     }
 
     struct Clip: Codable {
-        let duration: Int
+        let duration, id: Int
         let thumbnailUrl: String
     }
 

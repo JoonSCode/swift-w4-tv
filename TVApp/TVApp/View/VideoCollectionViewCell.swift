@@ -17,6 +17,14 @@ class VideoCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var contentInfo: UILabel!
     @IBOutlet weak var liveBadge: UILabel!
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+    }
+    
     func setThumbnail(thumbnail: UIImage?) {
         self.thumbnail.image = thumbnail
     }

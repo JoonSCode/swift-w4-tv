@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F71FD47B25C3FE2900E826A5 /* VideoCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71FD47A25C3FE2900E826A5 /* VideoCollectionView.swift */; };
 		F734378925C2F18A001B8B6E /* FavoriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F734378825C2F18A001B8B6E /* FavoriteTableViewController.swift */; };
 		F734379925C3A42D001B8B6E /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F734379825C3A42D001B8B6E /* Favorite.swift */; };
 		F734379C25C3A46B001B8B6E /* FavoriteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F734379B25C3A46B001B8B6E /* FavoriteManager.swift */; };
+		F73437A325C3C681001B8B6E /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73437A225C3C681001B8B6E /* FavoriteTableViewCell.swift */; };
 		F73A00AD25BE79FE00A7F70A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73A00AC25BE79FE00A7F70A /* AppDelegate.swift */; };
 		F73A00AF25BE79FE00A7F70A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73A00AE25BE79FE00A7F70A /* SceneDelegate.swift */; };
 		F73A00B125BE79FE00A7F70A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73A00B025BE79FE00A7F70A /* MainViewController.swift */; };
@@ -27,9 +29,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F71FD47A25C3FE2900E826A5 /* VideoCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionView.swift; sourceTree = "<group>"; };
 		F734378825C2F18A001B8B6E /* FavoriteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoriteTableViewController.swift; path = TVApp/Controller/FavoriteTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		F734379825C3A42D001B8B6E /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 		F734379B25C3A46B001B8B6E /* FavoriteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteManager.swift; sourceTree = "<group>"; };
+		F73437A225C3C681001B8B6E /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		F73A00A925BE79FE00A7F70A /* TVApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F73A00AC25BE79FE00A7F70A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F73A00AE25BE79FE00A7F70A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 			children = (
 				F73A012025BFD38100A7F70A /* VideoCollectionViewCell.swift */,
 				F734378825C2F18A001B8B6E /* FavoriteTableViewController.swift */,
+				F73437A225C3C681001B8B6E /* FavoriteTableViewCell.swift */,
+				F71FD47A25C3FE2900E826A5 /* VideoCollectionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -212,8 +218,10 @@
 			files = (
 				F734378925C2F18A001B8B6E /* FavoriteTableViewController.swift in Sources */,
 				F734379C25C3A46B001B8B6E /* FavoriteManager.swift in Sources */,
+				F71FD47B25C3FE2900E826A5 /* VideoCollectionView.swift in Sources */,
 				F753ACF925C1AEBD002D1491 /* Convert.swift in Sources */,
 				F734379925C3A42D001B8B6E /* Favorite.swift in Sources */,
+				F73437A325C3C681001B8B6E /* FavoriteTableViewCell.swift in Sources */,
 				F73A013F25C0FE6C00A7F70A /* VideoManager.swift in Sources */,
 				F73A00B125BE79FE00A7F70A /* MainViewController.swift in Sources */,
 				F73A012C25C000C100A7F70A /* Channel.swift in Sources */,

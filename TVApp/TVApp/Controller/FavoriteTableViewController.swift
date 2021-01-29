@@ -8,6 +8,8 @@
 import UIKit
 
 class FavoriteTableViewController: UITableViewController {
+    let favoriteManager = FavoriteManager.instance
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,24 +23,20 @@ class FavoriteTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in _: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return favoriteManager.count
     }
 
-    /*
-     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-         // Configure the cell...
-
-         return cell
-     }
-     */
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteCell", for: indexPath)
+        guard let favoriteCell = cell as? FavoriteTableViewCell else { return cell }
+        let favorite = favoriteManager[indexPath.row]
+        favoriteCell.setCell(title: favorite.title, subTitle: favorite.subTitle)
+        return cell
+    }
 
     /*
      // Override to support conditional editing of the table view.

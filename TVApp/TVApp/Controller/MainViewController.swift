@@ -11,16 +11,17 @@ class MainViewController: UIViewController {
     @IBOutlet var videoTypeSegmentControl: UISegmentedControl!
     @IBOutlet var videoCollectionView: UICollectionView!
     private let videoManager = VideoManager.instance
+    private let favoriteManager = FavoriteManager.instance
     private var videoType: Video.VideoType = .CLIP
     private var cellSize = CGSize()
+    private var clickTime = Date()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
-        UIDevice.current.beginGeneratingDeviceOrientationNotifications()
         calculateCellSize(viewWidth: nil)
-//        videoCollectionView.reloadData()
-        NotificationCenter.default.addObserver(self, selector: #selector(reloadContents(_:)), name: .contentsChanged, object: nil)
+        videoCollectionView.reloadData()
+        becomeFirstResponder()
     }
 
     func initView() {
@@ -34,14 +35,12 @@ class MainViewController: UIViewController {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         calculateCellSize(viewWidth: size.width)
-//        videoCollectionView.reloadData()
-        NotificationCenter.default.post(name: .contentsChanged, object: nil)
+        videoCollectionView.reloadData()
     }
 
     @IBAction func changeSegment(_: Any) {
         videoType = videoType == .CLIP ? .LIVE : .CLIP
-//        videoCollectionView.reloadData()
-        NotificationCenter.default.post(name: .contentsChanged, object: nil)
+        videoCollectionView.reloadData()
     }
 
     func calculateCellSize(viewWidth: CGFloat?) {
@@ -66,8 +65,21 @@ class MainViewController: UIViewController {
         return UIDevice.current.userInterfaceIdiom == .phone ? true : false
     }
 
-    @objc func reloadContents(_: Notification) {
-        videoCollectionView.reloadData()
+    override func touchesBegan(_: Set<UITouch>, with _: UIEvent?) {
+        clickTime = Date()
+
+        print("리스폰더체인")
+    }
+
+    override func touchesEnded(_ touches: Set<UITouch>, with _: UIEvent?) {
+        print("뗌")
+        print(clickTime.distance(to: Date()))
+        if clickTime.distance(to: Date()) < 2 { return }
+        guard let touchPoint = touches.first?.location(in: videoCollectionView) else { return }
+        guard let index = videoCollectionView.indexPathForItem(at: touchPoint) else { return }
+//        guard let cell = videoCollectionView.cellForItem(at: index) as? VideoCollectionViewCell else { return }
+        let video = videoType == .CLIP ? videoManager.getOriginalContent(at: index.item) : videoManager.getLiveContent(at: index.item)
+        favoriteManager.add(favorite: Favorite(title: video.displayTitle, subTitle: "\(video.channel.name) (\(video.id))"))
     }
 }
 
